@@ -10,6 +10,14 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var itemTextField: UITextField!
+    @IBAction func addItemButton(_ sender: UIButton) {
+        if (itemTextField.text != ""){
+            list.append(itemTextField.text!)
+            itemTextField.text = ""
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
